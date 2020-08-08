@@ -10,6 +10,8 @@
   "dependencies": {
     "next": "9.5.1",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-fabricjs": "^0.1.6",
+    "recoil": "^0.0.10"
   }
 }
