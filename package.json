@@ -8,10 +8,15 @@
     "start": "next start"
   },
   "dependencies": {
+    "antd": "^4.5.2",
     "next": "9.5.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-fabricjs": "^0.1.6",
-    "recoil": "^0.0.10"
+    "recoil": "^0.0.10",
+    "sass": "^1.26.10"
+  },
+  "devDependencies": {
+    "prettier": "^2.0.5"
   }
 }
