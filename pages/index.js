@@ -8,7 +8,15 @@ import { Button } from 'antd'
 
 import { FormOutlined } from '@ant-design/icons'
 
+import { atom, useRecoilState } from 'recoil'
+
+const loggedin = atom({
+  key: 'loggedin',
+  default: false,
+});
+
 export default function Home() {
+  const [loggedIn, setLoggedIn] = useRecoilState(loggedin);
   return (
     <Layout>
       <Head>
@@ -21,6 +29,7 @@ export default function Home() {
 
       <header>
         <div className="logo"><FormOutlined /> Forms</div>
+        <a onClick={() => setLoggedIn(true)}>{loggedIn ? `Logged In` : `Sign in`}</a>
       </header>
 
       <main className="container">
