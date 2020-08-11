@@ -6,6 +6,8 @@ import Layout from '../components/layout'
 
 import { Button } from 'antd'
 
+import { FormOutlined } from '@ant-design/icons'
+
 export default function Home() {
   return (
     <Layout>
@@ -17,12 +19,20 @@ export default function Home() {
         <link rel="stylesheet" src="https://fonts.googleapis.com/css?family=Roboto" />
       </Head>
 
-      <main>
-        <h1>Online Digital Forms</h1>
-        <div>
-        Upload and configure your digital form fields online, see result in live view, fill forms out and get the outcome.
-        </div>
-        <Button type="primary" size="large">Start</Button>
+      <header>
+        <div className="logo"><FormOutlined /> Forms</div>
+      </header>
+
+      <main className="container">
+        
+        <section className="slogan">
+          <h1>Online Digital Forms</h1>
+          <div>
+            Upload and configure your digital form fields online, see result in live view, fill forms out and get the outcome.
+          </div>
+          <Button type="primary" size="large">Start</Button>
+        </section>
+        
       </main>
 
       <footer className={styles.footer}>

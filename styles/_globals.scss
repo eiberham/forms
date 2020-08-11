@@ -14,3 +14,13 @@ a {
 * {
   box-sizing: border-box;
 }
+
+header {
+  grid-area: head;
+  .logo {
+      text-transform: uppercase;
+      letter-spacing: 0.3rem;
+      color: green;
+      font-weight: 600;
+  }
+}
