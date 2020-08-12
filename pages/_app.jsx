@@ -1,5 +1,6 @@
+import React from 'react'
 import {
-  RecoilRoot
+  RecoilRoot,
 } from 'recoil'
 import '../styles/styles.scss'
 
