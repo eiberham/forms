@@ -1,22 +1,12 @@
 import Head from 'next/head'
 
-import styles from '../styles/Home.module.scss'
-
 import Layout from '../components/layout'
+import Header from '../components/header'
+import Footer from '../components/footer'
 
 import { Button } from 'antd'
 
-import { FormOutlined } from '@ant-design/icons'
-
-import { atom, useRecoilState } from 'recoil'
-
-const loggedin = atom({
-  key: 'loggedin',
-  default: false,
-});
-
 export default function Home() {
-  const [loggedIn, setLoggedIn] = useRecoilState(loggedin);
   return (
     <React.StrictMode>
       <Layout>
@@ -27,27 +17,15 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" />
           <link rel="stylesheet" src="https://fonts.googleapis.com/css?family=Roboto" />
         </Head>
-
-        <header>
-          <div className="logo"><FormOutlined /> Forms</div>
-          <a onClick={() => setLoggedIn(true)}>{loggedIn ? `Logged In` : `Sign in`}</a>
-        </header>
-
-        <main className="container">
-          
-          <section className="slogan">
-            <h1>Online Digital Forms</h1>
-            <div>
-              Upload and configure your digital form fields online, see result in live view, fill forms out and get the outcome.
-            </div>
-            <Button type="primary" size="large">Start</Button>
-          </section>
-          
-        </main>
-
-        <footer className={styles.footer}>
-          @Forms 2020
-        </footer>
+        <Header />
+        <section className="slogan">
+          <h1>Online Digital Forms</h1>
+          <div className="slogan-text">
+            Upload and configure your digital form fields online, see result in live view, fill forms out and get the outcome.
+          </div>
+          <Button type="primary" size="large">Start</Button>
+        </section>
+        <Footer />
       </Layout>
     </React.StrictMode>
   )
