@@ -1,7 +1,7 @@
 .container {
     margin: auto;
     display: grid;
-    grid-template-rows: min-content;
+    grid-template-rows: minmax(50px, min-content);
     grid-template-columns: 1fr;
     grid-auto-rows: minmax(220px, max-content);
     grid-gap: 0;

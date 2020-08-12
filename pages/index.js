@@ -18,35 +18,37 @@ const loggedin = atom({
 export default function Home() {
   const [loggedIn, setLoggedIn] = useRecoilState(loggedin);
   return (
-    <Layout>
-      <Head>
-        <meta charSet="utf-8" />
-        <meta httpEquiv="content-language" content="en" />
-        <title>Forms</title>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="stylesheet" src="https://fonts.googleapis.com/css?family=Roboto" />
-      </Head>
+    <React.StrictMode>
+      <Layout>
+        <Head>
+          <meta charSet="utf-8" />
+          <meta httpEquiv="content-language" content="en" />
+          <title>Forms</title>
+          <link rel="icon" href="/favicon.ico" />
+          <link rel="stylesheet" src="https://fonts.googleapis.com/css?family=Roboto" />
+        </Head>
 
-      <header>
-        <div className="logo"><FormOutlined /> Forms</div>
-        <a onClick={() => setLoggedIn(true)}>{loggedIn ? `Logged In` : `Sign in`}</a>
-      </header>
+        <header>
+          <div className="logo"><FormOutlined /> Forms</div>
+          <a onClick={() => setLoggedIn(true)}>{loggedIn ? `Logged In` : `Sign in`}</a>
+        </header>
 
-      <main className="container">
-        
-        <section className="slogan">
-          <h1>Online Digital Forms</h1>
-          <div>
-            Upload and configure your digital form fields online, see result in live view, fill forms out and get the outcome.
-          </div>
-          <Button type="primary" size="large">Start</Button>
-        </section>
-        
-      </main>
+        <main className="container">
+          
+          <section className="slogan">
+            <h1>Online Digital Forms</h1>
+            <div>
+              Upload and configure your digital form fields online, see result in live view, fill forms out and get the outcome.
+            </div>
+            <Button type="primary" size="large">Start</Button>
+          </section>
+          
+        </main>
 
-      <footer className={styles.footer}>
-        @Forms 2020
-      </footer>
-    </Layout>
+        <footer className={styles.footer}>
+          @Forms 2020
+        </footer>
+      </Layout>
+    </React.StrictMode>
   )
 }
